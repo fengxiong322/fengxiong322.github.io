@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feng's Portfolio</title>
+  <link rel="stylesheet" href="../htmllayout.css">
+</head>
+
+<body>
+  <nav>
+   <a href= "../portfolio.html">Home</a>
+   <p></p>
+   <a class = "current" href = "OOPmenu.html">OOP</a>
+   <p></p>
+   <a href="../GUI/GUImenu.html">GUI</a>
+   <p></p>
+   <a href="../Projects/projects.html">Projects</a>
+   <p></p>
+   <a href="#about.html">About</a>
+ </nav>
+
+ <header>
+  <h2>Work On OOP</h2>
+</header>
+
+<section>
+  <aside>
+    <u><b><p>Table of contents</p></b></u>
+    <table style="width:100%">
+      <tr>
+        <td><a href="OOPMenu.html">What is OOP?</a></td>
+      </tr><tr>
+        <td><a href = "OOP-FairyTales/OOPFairyTales.html">Fairy Tale OOP</a></td>
+      </tr><tr>
+        <td><a href="OOP-L1-Feng/OOPLesson1.html">OOP Lesson 1</a></td>
+      </tr><tr>
+        <td><a href="OOP-L2-Feng/OOPLesson2.html">OOP Lesson 2</a></td>
+      </tr><tr>
+        <td><a href="OOP-L1-Feng/OOPLesson3.html">OOP Lesson 3</a></td>
+      </tr>
+    </table>
+  </aside>
+
+  <article>
+    <b><u><p>1. Definitions of the following in terms of Objects/classes in Java.</p></u></b>
+
+<p><b>accessor method</b>: A class' accessor method allows another class to read its private variables/fields.</p>
+
+<p><b>explicit parameter</b>: An explicit parameter is part of the parameter list declared in the constructor.</p>
+
+<p><b>null reference</b>: A null reference can be given to any non primitive data type, and indicates that it doesn't reference an object.</p>
+
+<p><b>formal parameter</b>: The parameters inside the parentheses when describing a method.</p>
+
+<p><b>mutator method</b>: A mutator is a set method, and allows for other classes to edit values.</p>
+
+<p><b>String literal</b>: The value within double quotes.</p>
+
+<p><b>pass by value</b>: Passes the actually value and not a reference to the parameter.</p>
+
+<p><b>actual parameter</b>: The parameters inside the parentheses when calling the method.</p>
+
+<p><b>implicit parameter</b>: It is the implicit parameter of the object that is calling it.</p>
+
+<p><b>scope</b>: Represents the time that the variable is "alive".</p>
+
+<p><b>promoting</b>: When working with PDTs of different sizes, java will automatically grow the smallest data type into the larger one.</p>
+
+<p><b>pass by reference</b>: Passes the instance variable and not a value to the parameter.</p>
+
+<b><u><p>2. Explain the relationship between the variable scope and the initialization process.</p></u></b>
+
+<p>The variable scope is the range between its initialization and the end of the code block in which the initialization occured.</p>
+
+<b><u><p>3. Explain what is happening in RAM in each of these lines of code:</p></u></b>
+
+<p>String m = "My name";</p>
+
+<p>String r = "Your name";</p>
+
+<p>r = m;</p>
+
+<p>m = null;</p>
+
+<p>A new object with the value "My name" is stored in the string pool</p>
+
+<p>The String pool is checked for the value "Your name"</p>
+
+<p>A new object with the value "Your name" is stored in the string pool</p>
+
+<p>r references m.</p>
+
+<p>m is given a null reference, and no longer refers to the value "My name".</p>
+
+<b><u><p>4. Explain the differences between compareTo(), compareToIgnoreCase(), and equals().</p></u></b>
+
+<p>compareTo() and compareToIgnoreCase() both try to order two Strings in alphabetical order. However, compareTo() compares ascii values, and so uppercase values are different from the lower case value of the same letter. To solve this problem, compareToIgnoreCase() converts everything to lowercase before comparing. equals() is different because it returns a boolean value. That value indicates if the two strings have the same value, or if they do not.</p>
+
+<b><u><p>5. The object class - the following methods are required for the AP exam. Define each method in your own words and give your own code examples for each method.</p></u></b>
+
+<p>toString(): The toString() method allows the class to return something, without specifically calling this method. The default toString() method will return information on the object.</p>
+
+<p>public class ToStringExample{</p>
+
+<p>&emsp;public String toString(){</p>
+
+<p>&emsp;&emsp;return "This is how toString() works!";</p>
+
+<p>&emsp;}</p>
+
+<p>&emsp;public static void main(String[]args){</p>
+
+<p>&emsp;&emsp;ToStringExample tse = new ToStringExample();</p>
+
+<p>&emsp;&emsp;System.out.println(tse);</p>
+
+<p>&emsp;}</p>
+
+<p>}</p>
+
+<p>OUTPUT: This is how toString() works!</p>
+
+<p>equals(): The equals() method allows for comparison between two classes. The default method will check for the same reference point. You must override for other functions. The String class has an override method.</p>
+
+<p>public static void main(String[]args){</p>
+
+<p>&emsp;String m = "This is a String";</p>
+
+<p>&emsp;if(m.equals("Hello!"))</p>
+
+<p>&emsp;&emsp;System.out.println("This won’t print");</p>
+
+<p>&emsp;else</p>
+
+<p>&emsp;&emsp;System.out.println("This is right. The two strings are not equal");</p>
+
+<p>&emsp;//Usage with default equals() function</p>
+
+<p>&emsp;RandomClass rc = new RandomClass();</p>
+
+<p>&emsp;RandomClass rc1 = rc;</p>
+
+<p>&emsp;System.out.println(rc.equals(rc1));//should return true</p>
+
+<p>}</p>
+
+<p>hashCode(): This method will give you a hash code for the object. The object that return equal from the equals() method would ideally have the same hash. The string method has an override method for equals() and does not simply check for the reference points.</p>
+
+<p>public static void main(String[]args){</p>
+
+<p>&emsp;String m = "this is a String";</p>
+
+<p>&emsp;String r = "this is a String";</p>
+
+<p>&emsp;if(m.hashCode() == r.hashCode())</p>
+
+<p>&emsp;&emsp;System.out.println("Yay!");</p>
+
+<p>&emsp;//Usage with the default equals() function</p>
+
+<p>&emsp;RandomClass rc = new RandomClass();</p>
+
+<p>&emsp;RandomClass rc1 = rc;</p>
+
+<p>&emsp;System.out.println(rc.hashCode() + " is equal to " + rc1.hashCode());</p>
+
+<p>}</p>
+
+<b><u><p>6. Explain class downcasting. List the pros and cons of downcasting as well as any cautions</p></u></b>
+
+<p>Class downcasting is when a Superclass instance variable creates a subclass object</p>
+
+<p>PROS</p>
+
+<p>Can access superclass methods not included in subclass</p>
+
+<p>Can access subclass overrides, as well as extra subclass methods</p>
+
+<p>Allows for polymorphism</p>
+
+<p>CONS</p>
+
+<p>Can't use overridden superclass methods</p>
+
+<p>Normally bad programming practise</p>
+
+<p>CAUTIONS</p>
+
+<p>You cannot cast to another subclass</p>
+
+<p>Unless you cast, calling methods that are not in the super class returns an error</p>
+
+<b><u><p>7. Explain class casting. List the pros and cons of casting as well as any cautions.</p></u></b>
+
+<p>Class casting can be used when trying to access extra methods from the subclass when downcasting.</p>
+
+<p>PROS</p>
+
+<p>allows access to unique subclass methods</p>
+
+<p>CONS</p>
+
+<p>limited to that specified subclass</p>
+
+<p>CAUTIONS</p>
+
+<p>You cannot cast to a different subclass</p>
+
+<b><u><p>8. Explain PDT casting. List the pros and cons of casting as well as any cautions.</p></u></b>
+
+<p>Primitive data type casting is converting one PDT to another.</p>
+
+<p>PROS</p>
+
+<p>Allows for easier manipulation of data</p>
+
+<p>CONS</p>
+
+<p>Casting a larger data type to a smaller one will result in a loss of data</p>
+
+<p>CAUTIONS</p>
+
+<p>Booleans cannot be cannot be casted into another data type, nor can it be casted into by another data type</p>
+
+<p>9. Explain the difference between static/class and instance/member methods.</p>
+
+<p>Static methods do not rely on values created with an object. They are consistent throughout all objects, and can even be used without an object. On the other hand, instance methods are object specific. They require an object in order to be run.</p>
+
+  </article>
+</section>
+
+<footer>
+  <p>Created by Feng</p>
+</footer>
+
+</body>
+
+</html>

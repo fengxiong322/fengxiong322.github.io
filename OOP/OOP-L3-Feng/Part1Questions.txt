@@ -1,0 +1,127 @@
+1. Definitions of the following in terms of Objects/classes in Java.
+
+ accessor method: A class' accessor method allows another class to read its private variables/fields.
+ explicit parameter: An explicit parameter is part of the parameter list declared in the constructor.
+ null reference: A null reference can be given to any non primitive data type,
+ and indicates that it doesn't reference an object.
+ formal parameter: The parameters inside the parentheses when describing a method.
+ mutator method: A mutator is a set method, and allows for other classes to edit values.
+ String literal: The value within double quotes.
+ pass by value: Passes the actually value and not a reference to the parameter.
+ actual parameter: The parameters inside the parentheses when calling the method.
+ implicit parameter: It is the implicit parameter of the object that is calling it.
+ scope: Represents the time that the variable is "alive".
+ promoting: When working with PDTs of different sizes, java will automatically
+ grow the smallest data type into the larger one.
+ pass by reference: Passes the instance variable and not a value to the parameter.
+
+
+2. Explain the relationship between the variable scope and the initialization process.
+
+The variable scope is the range between its initialization and the end of the code block in which the initialization occured.
+
+
+3. Explain what is happening in RAM in each of these lines of code:
+
+   String m = "My name";
+   String r = "Your name";
+   r = m;
+   m = null;
+
+A new object with the value "My name" is stored in the string pool
+The String pool is checked for the value "Your name"
+A new object with the value "Your name" is stored in the string pool
+r references m.
+m is given a null reference, and no longer refers to the value "My name".
+
+
+4. Explain the differences between compareTo(), compareToIgnoreCase(), and equals().
+
+compareTo() and compareToIgnoreCase() both try to order two Strings in alphabetical order.
+However, compareTo() compares ascii values, and so uppercase values are different from the
+lower case value of the same letter. To solve this problem, compareToIgnoreCase() converts
+everything to lowercase before comparing. equals() is different because it returns a boolean value. That value indicates if the two strings have the same value, or if they do not.
+
+5. The object class - the following methods are required for the AP exam. Define each method in your own words and give your own code examples for each method.
+
+toString(): The toString() method allows the class to return something, without specifically calling this method. The default toString() method will return information on the object.
+
+public class ToStringExample{
+	public String toString(){
+		return "This is how toString() works!";
+	}
+	
+	public static void main(String[]args){
+		ToStringExample tse = new ToStringExample();
+		System.out.println(tse);
+	}
+}
+
+OUTPUT: This is how toString() works!
+
+equals(): The equals() method allows for comparison between two classes. The default method will check for the same reference point. You must override for other functions. The String class has an override method.
+
+public static void main(String[]args){
+	String m = "This is a String";
+	if(m.equals("Hello!"))
+		System.out.println("This won’t print");
+	else
+		System.out.println("This is right. The two strings are not equal");
+	//Usage with default equals() function
+	RandomClass rc = new RandomClass();
+	RandomClass rc1 = rc;
+	System.out.println(rc.equals(rc1));//should return true
+}
+
+hashCode(): This method will give you a hash code for the object. The object that return equal from the equals() method would ideally have the same hash. The string method has an override method for equals() and does not simply check for the reference points.
+
+public static void main(String[]args){
+	String m = "this is a String";
+	String r = "this is a String";
+	if(m.hashCode() == r.hashCode())
+		System.out.println("Yay!");
+	//Usage with the default equals() function
+	RandomClass rc = new RandomClass();
+	RandomClass rc1 = rc;
+	System.out.println(rc.hashCode() + " is equal to " + rc1.hashCode());
+}
+
+
+6. Explain class downcasting. List the pros and cons of downcasting as well as any cautions
+
+Class downcasting is when a Superclass instance variable creates a subclass object
+PROS
+Can access superclass methods not included in subclass
+Can access subclass overrides, as well as extra subclass methods
+Allows for polymorphism
+CONS
+Can't use overridden superclass methods
+Normally bad programming practise
+CAUTIONS
+You cannot cast to another subclass
+Unless you cast, calling methods that are not in the super class returns an error
+
+7. Explain class casting. List the pros and cons of casting as well as any cautions.
+
+Class casting can be used when trying to access extra methods from the subclass when downcasting.
+PROS
+allows access to unique subclass methods
+CONS
+limited to that specified subclass
+CAUTIONS
+You cannot cast to a different subclass
+
+8. Explain PDT casting. List the pros and cons of casting as well as any cautions.
+
+Primitive data type casting is converting one PDT to another.
+PROS
+Allows for easier manipulation of data
+CONS
+Casting a larger data type to a smaller one will result in a loss of data
+CAUTIONS
+Booleans cannot be cannot be casted into another data type, nor can it be casted into by another data type
+
+9. Explain the difference between static/class and instance/member methods.
+
+Static methods do not rely on values created with an object. They are consistent throughout all objects, and can even be used without an object. On the other hand, instance methods are object specific. They require an object in order to be run.
+

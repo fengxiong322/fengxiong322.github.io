@@ -1,0 +1,171 @@
+Evaluation: Objects and UML
+1. What does OOP stand for? Object Oriented Programming
+2. In relation to OOP, what is a Class? The blueprint
+3. In relation to OOP, what is an Object? The instance
+4. In relation to OOP, what is an Object's name? The identifier
+5. In relation to OOP, what is an Object's attribute? The variables
+6. In relation to OOP, what is an Object's behaviour? The instance methods
+7. What does a constructor look like/2 characteristics of a constructor(vs. method)?
+	a) It has no return value
+	b) It must have the same name as the class.
+
+8.
+public class Car {
+   	private String brand;
+    private String model;
+    private int kilometres;
+    private double gas;
+    private double tankCapacity;
+
+    public Car(String b, String m, double g, double tCap) {
+        brand = b;
+        model = m;
+        kilometres = 0;
+        gas = g;
+        tankCapacity = tCap;
+    }
+
+    public void drive(double distance) {
+    		kilometres += distance;
+    		gas -= distance / 5;
+    }
+    public void gasUp(int litres) {
+    	gas = tankCapacity;
+    }
+
+    public String getInfo() {
+        return brand + " " + model;
+    }
+}
+
+UML
+_________________________
+Car
+_________________________
+-brand: String
+-model: String
+-kilometres: int
+-gas: double
+-tankCapacity: double
+_________________________
++Car(b: String, m: String, g: double, tCap: double)
++drive(distance:double): void
++gasUp(litres: int): void
++getInfo(): String
+_________________________
+
+1.
+UML
+_________________________
+Bank_Account
+_________________________
++acct_num: long
+-balance: double
+-type: String
+-interest_rate: float
+_________________________
++Bank_Account(acct: long, bal: double, ty: String, interest: float)
++getBalance(): double
++getType(): String
++deposit(amt: double): void
++withdrawal(amt: double): boolean
++applyInterest(): void
+_________________________
+
+public class Bank_Account {
+    public long acct_num;
+    private double balance;
+    private String type;
+    private float interest_rate;
+
+    public Bank_Account(long acct, double bal, String ty, float interest) {
+        acct_num = acct;
+        balance = bal;
+        type = ty;
+        interest_rate = interest;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public boolean withdrawal(double amt) {
+        if (amt <= balance) {
+            balance -= amt;
+            return true;
+        } else
+            return false;
+    }
+
+    public void deposit(double amt) {
+        balance += amt;
+    }
+
+    public void applyInterest() {
+        balance += balance * interestRate;
+    }
+}
+
+Programming
+1. Create 2 Bank_Account objects and use each method once.
+Bank_Account fred = new Bank_Account(61782346, 12.1, "chequing", 2);
+fred.getBalance();
+fred.getType();
+fred.withdrawal();
+fred.deposit();
+fred.applyInterest();
+
+Bank_Account bob = new Bank_Account(53792190, 12.2, "chequing", 2);
+bob.getBalance();
+bob.getType();
+bob.withdrawal();
+bob.deposit();
+bob.applyInterest();
+
+2. Create 2 Car objects and use each method once.
+Car honda = new Car("Honda", "Civic", 12.2, 30);
+honda.drive(10);
+honda.gasUp();
+honda.getInfo();
+
+Car honda1 = new Car("Honda", "Civic", 12.2, 30);
+honda1.drive(10);
+honda1.gasUp();
+honda1.getInfo();
+
+Creating UML
+Instructions: Design an UML for the following class, using appropriate attributes and behaviours(with a variety of return-types and parameters)
+1. Person class
+_______________________
+Person
+_______________________
++arms: int
++eyes: int
++name: String
++emotion: String
+_______________________
++Person(ar: int, eye: int, nam: String, emot: String)
++getArm(): int
++getEyes(): int
++setEmotion(emot: String): void
++setName(nam: String): void
+_______________________
+2. House class
+_______________________
+House
+_______________________
++rooms: int
++size: int
++name: String
++conditon: String
+_______________________
++House(roo: int, siz: int, nam: String, con: String)
++getRooms(): int
++getSize(): int
++setName(nam: String): void
++setCondition(con: String): void
+_______________________
