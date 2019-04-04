@@ -1,6 +1,6 @@
 <html>
    <head>
-      <title>OOP In Fairy Tales</title>
+      <title>OOP Excercise 1</title>
         <link rel="stylesheet" href="../../../htmllayout.css">
    </head>
    <body>
@@ -16,7 +16,7 @@
    <a href="../../about.html">About</a>
  </nav>
   <header>
-  <h2>Fairy Tale OOP</h2>
+  <h2>Excercise 1</h2>
 </header>
  <section>
   <aside>
@@ -34,7 +34,37 @@
     </table>
   </aside>
   <article>
-
+    <h1>Excercise 1</h1>
+    <p>Welcome to the first part in this three part series. Here, we learn about the general format of a basic OOP styled program</p>
+    <h1>The Instance Variables</h1>
+    <p>Imagine we have a class, that describe the state of a certain Animal. For instance, its name, if its tired or hungry, and its weight. These things are declared as instance variables. These are put at the top of the class, after the opening line of the class. Instance variables should be private. This is to prevent other classes from making changes that shouldn't be possible. For instance, something my try to multiply the weight of an Animal by 100. This may not make sense. We will talk more about how we can prevent this later.</p>
+    <pre class = codeSample>public class Animal{
+  //Instance variables go here
+  private String name;
+  private boolean tired;
+  private double weight;
+  </pre>
+    <p>So far, our class defines fields. They define a section of memory, in which information is to be stored. In general, whenever we use this class, we dont want these feilds to be empty. We want to define something in it. To do this, we create a constructor. This constructor will create the Animal. Every Animal is different, so we should give a way to them their own name, and their weight when we create them. We can allow for these changes through parameters. Parameters is information that is given when the constructor is needed</p>
+    <pre class = codeSample>
+  //Constructor name MUST be the same as the class name
+  public Animal(String name, double w){
+    name = n;//
+    tired = true; // The animal will always start tired
+    hungry = true; // The animal will always start hungry
+    weight = w;
+  }</pre>
+    <p>Next, we want our animal to be able to interact with everything around it. For instance, if we feed it food, we want it to not be hungry. Likewise, if it sleeps, we want it to not be tired. We can do this by using methods. Methods define an action to perform.</p>
+    <pre class = "codeSample">
+  //The first method feed.
+  public void feed(String v) {//feeds the animal
+    hungry = false;//sets the hungry variable to false, making the animal not hungry
+      if (v.equals("vegetables"))//If you chose to feed the animal "vegetables"...
+        weight += 2;//The animal's weight increases by 2
+      else if (v.equals("meat"))//If you chose to feed the animal "meat"...
+        weight += 4;//The animal's weight increases by 4
+      else//If you chose to feed the animal anything else...
+        weight += 1;//The animal's weight increases by 1
+  }
   </article>
 </section>
 </body>

@@ -56,6 +56,13 @@ aside table:hover td:hover, a:hover {
   color: black;
 }
 
+pre.codeSample {
+  font-family:monospace,monospace;
+  font-size:1em;
+  background-color: #000;
+  color: #FFF;
+}
+
 nav {
   -webkit-flex: 1;
   -ms-flex: 1;
