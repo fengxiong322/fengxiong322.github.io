@@ -64,10 +64,23 @@
         weight += 4;//The animal's weight increases by 4
       else//If you chose to feed the animal anything else...
         weight += 1;//The animal's weight increases by 1
+  }
+
+  //Second method
+  public void sleep() {//makes the animal sleep
+    tired = false;//Sets the tired variable to false, making the animal not tired
+    weight -= 3;//The animal's weight decreases by 3
   }</pre>
   <p>Finally, we want to be able to run your program. We can do this by declaring a main method. This method is where you use all of the other methods to create a meaningful result. In this example, we make a few different animals</p>
 <pre class = "codeSample">
-
+  public static void main(String[] args) {
+      Animal a = new Animal("Cow", 10);
+      Animal b = new Animal("Sheep", 10);
+      Animal c = new Animal("Hippo", 10);
+      Animal d = new Animal("Cat", 10);
+      Animal e = new Animal("Goose", 10);
+  }
+}
   </article>
 </section>
 </body>
