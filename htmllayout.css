@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -67,13 +67,13 @@ nav {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background: #EAC67A;
+  background: #18121E;
   padding: 20px;
   display: block;
 }
 
 nav a{
-  background-color: #000000;
+  background-color: #18121E;
   float: none;
   color: #f2f2f2;
   text-align: center;
@@ -90,13 +90,13 @@ nav p {
 }
 
 nav a:hover {
-  background-color: #ddd;
+  background-color: #1f1f42;
   text-decoration: underline;
   color: black;
 }
 
 nav a.current {
-  background-color: #1d93e2;
+  background-color: #EAC67A;
   color: white;
 }
 
