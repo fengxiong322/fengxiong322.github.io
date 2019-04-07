@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: #666;
+  background-color: #18121E;
   padding: 30px;
   text-align: center;
   font-size: 30px;
@@ -28,11 +28,11 @@ aside {
   padding-right: 10px;
   padding-bottom: 300px;
   text-align: center;
-  background-color: #AAA
+  background-color: #233237;
 }
 
 aside table, td{
-  background-color: #000000;
+  background-color: #233237;
   float: none;
   text-align: center;
   padding: 10px 10px;
@@ -46,7 +46,7 @@ aside a{
 }
 
 aside td.current{
-  background-color: #1d93e2;
+  background-color: #984B43;
   color: white;
 }
 
@@ -67,7 +67,7 @@ nav {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background: #ccc;
+  background: #EAC67A;
   padding: 20px;
   display: block;
 }
