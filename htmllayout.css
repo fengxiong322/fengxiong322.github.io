@@ -92,7 +92,7 @@ nav p {
 nav a:hover {
   background-color: #1f1f42;
   text-decoration: underline;
-  color: black;
+  color: white;
 }
 
 nav a.current {
