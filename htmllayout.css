@@ -54,7 +54,7 @@ aside td.current{
   color: white;
 }
 
-aside table:hover td:hover, a:hover {
+aside a:hover ~ td, table{
   background-color: #ddd;
   text-decoration: underline;
   color: black;
