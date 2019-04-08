@@ -45,6 +45,10 @@ aside a{
   color: #f2f2f2;
 }
 
+aside p{
+  color: white;
+}
+
 aside td.current{
   background-color: #984B43;
   color: white;

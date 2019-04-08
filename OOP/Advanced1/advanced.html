@@ -29,7 +29,7 @@
     <u><b><p>TABLE OF CONTENTS</p></b></u>
     <table style="width:100%">
       <tr>
-        <td><a href="OOP/OOPMenu.html">What is OOP?</a></td>
+        <td><a href="OOP/OOPmenu.html">What is OOP?</a></td>
       </tr><tr>
         <td><a href = "OOP/OOP-FairyTales/OOPFairyTales.html">Fairy Tale OOP</a></td>
       </tr><tr>
@@ -77,23 +77,22 @@
 
 <b><u><p>3. Explain what is happening in RAM in each of these lines of code:</p></u></b>
 
-<p>String m = "My name";</p>
+<pre class = codeSample>
+String m = "Text 1";
+String r = "Text 2";
+r = m;
+m = null;
+</pre>
 
-<p>String r = "Your name";</p>
+<p>A new object with the value "Text 1" is stored in the string pool</p>
 
-<p>r = m;</p>
+<p>The String pool is checked for the value "Text 2"</p>
 
-<p>m = null;</p>
-
-<p>A new object with the value "My name" is stored in the string pool</p>
-
-<p>The String pool is checked for the value "Your name"</p>
-
-<p>A new object with the value "Your name" is stored in the string pool</p>
+<p>A new object with the value "Text 1" is stored in the string pool</p>
 
 <p>r references m.</p>
 
-<p>m is given a null reference, and no longer refers to the value "My name".</p>
+<p>m is given a null reference, and no longer refers to the value "Text 1".</p>
 
 <b><u><p>4. Explain the differences between compareTo(), compareToIgnoreCase(), and equals().</p></u></b>
 
@@ -103,71 +102,46 @@
 
 <p>toString(): The toString() method allows the class to return something, without specifically calling this method. The default toString() method will return information on the object.</p>
 
-<p>public class ToStringExample{</p>
-
-<p>&emsp;public String toString(){</p>
-
-<p>&emsp;&emsp;return "This is how toString() works!";</p>
-
-<p>&emsp;}</p>
-
-<p>&emsp;public static void main(String[]args){</p>
-
-<p>&emsp;&emsp;ToStringExample tse = new ToStringExample();</p>
-
-<p>&emsp;&emsp;System.out.println(tse);</p>
-
-<p>&emsp;}</p>
-
-<p>}</p>
+<pre class = codeSample>
+public class ToStringExample{
+  public String toString(){
+    return "This is how toString() works!";
+  }
+  public static void main(String[]args){
+    ToStringExample tse = new ToStringExample();
+    System.out.println(tse);
+  }
+}</pre>
 
 <p>OUTPUT: This is how toString() works!</p>
 
 <p>equals(): The equals() method allows for comparison between two classes. The default method will check for the same reference point. You must override for other functions. The String class has an override method.</p>
 
-<p>public static void main(String[]args){</p>
-
-<p>&emsp;String m = "This is a String";</p>
-
-<p>&emsp;if(m.equals("Hello!"))</p>
-
-<p>&emsp;&emsp;System.out.println("This won’t print");</p>
-
-<p>&emsp;else</p>
-
-<p>&emsp;&emsp;System.out.println("This is right. The two strings are not equal");</p>
-
-<p>&emsp;//Usage with default equals() function</p>
-
-<p>&emsp;RandomClass rc = new RandomClass();</p>
-
-<p>&emsp;RandomClass rc1 = rc;</p>
-
-<p>&emsp;System.out.println(rc.equals(rc1));//should return true</p>
-
-<p>}</p>
+<pre class = codeSample>
+  public static void main(String[]args){
+    String m = "This is a String";
+    if(m.equals("Hello!"))
+      System.out.println("This won’t print");
+    else
+      System.out.println("This is right. The two strings are not equal");</p>
+    //Usage with default equals() function
+    RandomClass rc = new RandomClass();
+    RandomClass rc1 = rc;
+    System.out.println(rc.equals(rc1));//should return true</p>
+}</pre>
 
 <p>hashCode(): This method will give you a hash code for the object. The object that return equal from the equals() method would ideally have the same hash. The string method has an override method for equals() and does not simply check for the reference points.</p>
-
-<p>public static void main(String[]args){</p>
-
-<p>&emsp;String m = "this is a String";</p>
-
-<p>&emsp;String r = "this is a String";</p>
-
-<p>&emsp;if(m.hashCode() == r.hashCode())</p>
-
-<p>&emsp;&emsp;System.out.println("Yay!");</p>
-
-<p>&emsp;//Usage with the default equals() function</p>
-
-<p>&emsp;RandomClass rc = new RandomClass();</p>
-
-<p>&emsp;RandomClass rc1 = rc;</p>
-
-<p>&emsp;System.out.println(rc.hashCode() + " is equal to " + rc1.hashCode());</p>
-
-<p>}</p>
+<pre class = codeSample>
+public static void main(String[]args){
+  String m = "this is a String";
+  String r = "this is a String";
+  if(m.hashCode() == r.hashCode())
+  System.out.println("Yay!");
+  //Usage with the default equals() function
+  RandomClass rc = new RandomClass();
+  RandomClass rc1 = rc;
+  System.out.println(rc.hashCode() + " is equal to " + rc1.hashCode());
+}
 
 <b><u><p>6. Explain class downcasting. List the pros and cons of downcasting as well as any cautions</p></u></b>
 
