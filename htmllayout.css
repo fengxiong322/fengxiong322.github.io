@@ -39,6 +39,8 @@ aside table, td{
   text-decoration: none;
   font-size: 15px;
   overflow: hidden;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 aside a{
@@ -56,9 +58,8 @@ aside td.current{
   color: white;
 }
 
-aside td:hover, table:hover ~ a{
-  background-color: #ddd;
-  text-decoration: underline;
+aside td:hover, {
+  background-color: #17282d;
   color: black;
 }
 
@@ -88,6 +89,8 @@ nav a{
   border-radius: 8px;
   font-size: 15px;
   overflow: hidden;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 nav p {
@@ -98,12 +101,10 @@ nav p {
 nav a:hover {
   background-color: #181856;
   text-decoration: underline;
-  color: white;
 }
 
 nav a.current {
   background-color: #EAC67A;
-  color: white;
 }
 
 article {
