@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Me</title>
+    <base href = "https://fengxiong322.github.io/">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="htmllayout.css">
+  </head>
+
+  <body>
+    <nav>
+        <a href= "index.html">Home</a>
+        <p></p>
+        <a href = "OOP/OOPmenu.html">OOP</a>
+        <p></p>
+        <a href="GUI/GUImenu.html">GUI</a>
+        <p></p>
+        <a class = "current" href="Recursion/recursion.html">Recursion</a>
+        <p></p>
+        <a href="Projects/projects.html">Projects</a>
+        <p></p>
+        <a href="about.html">About</a>
+    </nav>
+
+    <header>
+      <h2>Recursion</h2>
+    </header>
+
+  <section>
+  <aside>
+    <u><b><p>TABLE OF CONTENTS</p></b></u>
+    <table style="width:100%">
+      <tr>
+        <td class = "current"><a href="Recursion/recursion.html">Recursion</a></td>
+      </tr>
+    </table>
+  </aside>
+
+  <article>
+    <h1>What is Recursion?</h1>
+    <p>Recursion is when a method calls itself, to break a problem down into smaller subproblems, until it reachs a trivial base problem. So what does this actually mean when programming? Below is the general set up of a recursive method</p>
+    <pre class = "codeSample">
+public int aRecursiveMethod(int input){
+	if(baseCaseHasBeenReached){
+		return baseCaseValue;
+	}
+	else{
+		return aRecursiveMethod(something);//The method calls itself.
+	}
+}
+    </pre>
+    <p>To see how we can use this example, imagine we wanted to print out the n-th fibonnaci number. </p>
+    <pre class = "codeSample">
+  public int fibonnaciNumber(int index){
+  	if(index&gt;= 2)//This checks if the base case has been achieved. We know that the second value in the series is 1, and the first value is 1
+  		return 1;
+  	else{//If the base case has not been achieved run the program.
+  		return fibonnaciNumber(index-1) + fibonnaci(index-2);//To calculate the current number, we need the previous number and the one before that.
+  	}
+  }
+
+  public static void main(String[] args) {
+  	int fibonacci = fibonnaciNumber(5);
+  	System.out.println(fibonacci);
+  }
+    </pre>
+    <p>This fibonnaci algorithm is very common in simple examples of recursion. To see what happens, we need to print out the calls. Here is a visual demonstration of what happens in the algorithm at fib of 5</p>
+    <pre class = codeSample>
+                   5
+           4               3
+       3      2        2       1
+     2   1   1  0     1  0
+    1 0
+    </pre>
+    <p>Each method branches off into two, until it reachs the base case, which is either 1 or 0. Once the base case has been reached, they begin to merge, to answer each slightly larger subproblem, until the final answer is given. Now, you may have noticed, that many similar calls are made. For instance, fibonnaciNumber(4) calls 3 and two. But there is also a call of 3 on the right side of the tree. This redudency is okay for lower numbers, but once we get to higher numbers, we would like to be more efficient. To learn how to improve runtime speeds of your recursive method, read my <a href = ""> Dynamic Programming</a> article.</p>
+
+    <p>Recursion doesn't always have to follow this structure. Depending on the type of problem you are given, you can use a multitude of recursion methods. Here, we will be talking about 2 other types of recursion "formats": mutual and tail recursion</p>
+
+    <h1>Mutual Recursion</h1>
+    <p>Mutual Recursion is when two or methods call each other recursively. To visualize this, imagine </p>
+    <h1>Tail Recursion</h1>
+    <p>So</p>
+  </article>
+</section>
+
+<footer>
+  <p>Created by Feng</p>
+</footer>
+
+</body>
+
+</html>
