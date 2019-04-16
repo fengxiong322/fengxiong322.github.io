@@ -58,9 +58,8 @@ aside td.current{
   color: white;
 }
 
-aside td:hover, {
-  background-color: #17282d;
-  color: black;
+aside td:hover{
+  background-color: #0b5166;
 }
 
 pre.codeSample {
