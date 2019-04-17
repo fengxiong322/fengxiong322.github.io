@@ -1,0 +1,22 @@
+.modalbackground{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.modal{
+	position: absolute;
+	z-index: 2;
+	top: 25%;
+	left: 25%;
+	padding:10px;
+	bottom: 25%;
+	right: 25%;
+
+}
