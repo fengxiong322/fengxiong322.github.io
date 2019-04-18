@@ -11,12 +11,14 @@
 }
 
 .modal{
-	position: absolute;
+	position: fixed;
 	z-index: 2;
-	top: 25%;
-	left: 25%;
-	padding:10px;
-	bottom: 25%;
-	right: 25%;
-
+  top: 50%;
+  left: 50%;
+  width:40em;
+  height:20em;
+  margin-top: -10em;
+  margin-left: -20em;
+  border: 1px solid #ccc;
+  background-color: #f3f3f3;
 }
