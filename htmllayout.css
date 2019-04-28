@@ -41,7 +41,7 @@ aside table, td{
   background-color: #233237;
   float: none;
   text-align: center;
-  padding: 10px 10px;
+  padding: 10px 5px;
   text-decoration: none;
   font-size: 15px;
   overflow: hidden;
@@ -74,6 +74,7 @@ pre.codeSample {
   white-space: pre-wrap;
   background-color: #000;
   color: #FFF;
+  border-radius: 4px;
 }
 
 nav {
@@ -125,7 +126,7 @@ article {
 }
 
 footer {
-  background-color: #777;
+  background-color: #f2f2f2;
   padding: 10px;
   text-align: center;
   color: white;
