@@ -30,7 +30,7 @@ public class House {
         House b = new House("2243", "cedar", "toronto", "ontario", "M1D0R5", 1230, true, 2);
         House c = new House("243", "street", "toronto", "ontario", "M1D3R0", 1230, true, 2);
         House d = new House("43", "orange", "toronto", "ontario", "M1D7R8", 1230, true, 2);
-        House e = new House("23", "pinapple", "toronto", "ontario", "M1D7R5", 1230, true, 2);
+        House e = new House("23", "pineapple", "toronto", "ontario", "M1D7R5", 1230, true, 2);
     }
     
 } // House class

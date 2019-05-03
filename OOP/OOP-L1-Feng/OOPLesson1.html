@@ -2,17 +2,15 @@
 <html>
    <head>
       <title>OOP Lesson 1</title>
-      <base href = "https://fengxiong322.github.io/">
+      <base href = "fengxiong322.github.io\"><script type="text/javascript" src="interactions.js"></script>
       <link rel="icon" href="favicon.ico">
       <link rel="stylesheet" href="htmllayout.css">
    </head>
-   <body>
-     <nav>
+   <body><nav>
+     <button class= "menubutton" onclick = "sideBar()"></button>
       <a href= "index.html">Home</a>
       <p></p>
       <a class = "current" href = "OOPmenu.html">OOP</a>
-      <p></p>
-      <a href="GUI/GUImenu.html">GUI</a>
       <p></p>
       <a href="Recursion/recursion.html">Recursion</a>
       <p></p>
@@ -45,22 +43,142 @@
         <td><a href="OOP/Advanced1/advanced.html">Advanced OOP 1</a></td>
       </tr>
     </table>
-    <u><b><p>Exercises</p></b></u>
-    <table style = "width:100%">
-      <tr>
-        <td><a class = "current" href="OOP/OOP-L1-Feng/OOPLesson1.html">OOP Lesson 1</a></td>
-      </tr><tr>
-        <td><a href = "OOP/OOP-L1-Feng/Exercise1/exercise.html">Exercise 1</a></td>
-      </tr><tr>
-        <td><a href= "OOP/OOP-L1-Feng/Exercise2/exercise.html">Exercise 2</a></td>
-      </tr><tr>
-        <td><a href= "OOP/OOP-L1-Feng/Exercise3/exercise.html">Exercise 3</a></td>
-      </tr>
-    </table>
   </aside>
   <article>
-    <h1>Exercises</h1>
-    <p>This is part one, taught in exercises. to begin go to the side bar, and press Exercise 1!</p>
+      <article>
+    <h1>OOP 1</h1>
+    <p>Welcome to the first OOP tutorial!</p>
+    <h1>The Instance Variables</h1>
+    <p>Imagine we have a class, that describe the state of a certain Animal. For instance, its name, if its tired or hungry, and its weight. These things are declared as instance variables. These are put at the top of the class, after the opening line of the class. Instance variables should be private. This is to prevent other classes from making changes that shouldn't be possible. For instance, something may try to multiply the weight of an Animal by 100. This may not make sense. We will talk more about how we can prevent this later.</p>
+    <pre class = codeSample>public class Animal{
+  //Instance variables go here
+  private String name;
+  private boolean tired;
+  private double weight;
+  </pre>
+    <p>So far, our class defines fields. They define a section of memory, in which information is to be stored. In general, whenever we use this class, we don't want these fields to be empty. We want to define something in it. To do this, we create a constructor. This constructor will create the Animal. Every Animal is different, so we should give a way to them their own name, and their weight when we create them. We can allow for these changes through parameters. Parameters is information that is given when the constructor is needed</p>
+    <pre class = codeSample>
+  //Constructor name MUST be the same as the class name
+  public Animal(String name, double w){
+    name = n;//
+    tired = true; // The animal will always start tired
+    hungry = true; // The animal will always start hungry
+    weight = w;
+  }</pre>
+    <p>Next, we want our animal to be able to interact with everything around it. For instance, if we feed it food, we want it to not be hungry. Likewise, if it sleeps, we want it to not be tired. We can do this by using methods. Methods define an action to perform.</p>
+    <pre class = "codeSample">
+  //The first method feed.
+  public void feed(String v) {//feeds the animal
+    hungry = false;//sets the hungry variable to false, making the animal not hungry
+      if (v.equals("vegetables"))//If you chose to feed the animal "vegetables"...
+        weight += 2;//The animal's weight increases by 2
+      else if (v.equals("meat"))//If you chose to feed the animal "meat"...
+        weight += 4;//The animal's weight increases by 4
+      else//If you chose to feed the animal anything else...
+        weight += 1;//The animal's weight increases by 1
+  }
+
+  //Second method
+  public void sleep() {//makes the animal sleep
+    tired = false;//Sets the tired variable to false, making the animal not tired
+    weight -= 3;//The animal's weight decreases by 3
+  }</pre>
+  <p>Finally, we want to be able to run your program. We can do this by declaring a main method. This method is where you use all of the other methods to create a meaningful result. In this example, we make a few different animals</p>
+<pre class = "codeSample">
+  public static void main(String[] args) {
+      Animal a = new Animal("Cow", 10);
+      Animal b = new Animal("Sheep", 10);
+      Animal c = new Animal("Hippo", 10);
+      Animal d = new Animal("Cat", 10);
+      Animal e = new Animal("Goose", 10);
+  }
+}</pre>
+     
+ <h2>Your Turn!</h2>
+<p>To practise this concept, try to represent a Car, a House, and a Student. To help you, I will provide a template for you to edit:</p>
+     <pre class = "codeSample" contenteditable="true">
+  public class Car{
+    //Create variables for: brand, model, kilometers, gas, tankCapacity
+
+    //Add parameters
+    public Car(){
+      //Initialize Values
+    }
+
+    //Add a distance parameter
+    public void drive(){
+      //decide what happens when the car drives
+    }
+
+    //add gas to the car
+    public void gasUp(){
+      //fill the tank
+    }
+
+    public static void main(String[]args){
+      //Create cars!
+    }
+  }</pre>
+  <button onclick = "displayAnswer('car')">Compare</button>
+    <iframe class = "answers" id = car src = "OOP\OOP-L1-Feng\Exercise1\Car.java"></iframe>
+  <pre class = "codeSample" contenteditable="true">
+  public class House{
+    //Create the follow variables:    street_num, street name, city name, province name, postal_code, size(decimal number), detached(true or false), stories(number)
+    //NOTE: remember encapsulation
+
+    //parameters allow all variables to be set 
+    public House(){
+      //set variables
+    }
+
+    public void displayAddress(){//prints out a formatted house address
+      //Print the street number and the street name
+      //Print the city and province
+      //Print the postal code
+    }
+
+    public static void main(String[]args){
+      //Test!
+    }
+  }
+  </pre>
+  <button onclick = "displayAnswer('house')">Compare</button>
+  <iframe class = "answers" id = 'house' src = "OOP\OOP-L1-Feng\Exercise1\House.java"></iframe>
+
+  <pre class="codeSample" contenteditable="true">
+  public class Student{
+    //Create variables: students name, first and second mark, his average
+
+    //Parameters to set the name
+    public Student(){
+
+    }
+
+    //Parameters to set the marks
+    public void setMarks(){
+
+    }
+
+    //Calculate average
+    public void calcAverage(){
+
+    }
+
+    //Returns a string , containing the name and average of the student
+    public String message() {
+
+    }
+
+    public static void main(String[] args) {
+      //Test    
+    }
+  }
+  </pre>
+  <button onclick="displayAnswer('student')">Compare</button>
+  <iframe class = "answers" id = 'student' src = "OOP\OOP-L1-Feng\Exercise1\Student.java"></iframe>
+  <p>More examples can be found at</p>
+  <a href = "https://github.com/fengxiong322/fengxiong322.github.io/tree/master/OOP/OOP-L1-Feng/Exercise2">Exercise Set 2</a>
+  <a href = "https://github.com/fengxiong322/fengxiong322.github.io/tree/master/OOP/OOP-L1-Feng/Exercise3">Exercise Set 3</a>
   </article>
 </section>
 </body>

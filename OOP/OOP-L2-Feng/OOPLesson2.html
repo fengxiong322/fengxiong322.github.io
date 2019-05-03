@@ -1,16 +1,14 @@
 <html>
    <head>
       <title>OOP In Fairy Tales</title>
-      <base href = "https://fengxiong322.github.io/">
+      <base href = "fengxiong322.github.io\"><script type="text/javascript" src="interactions.js"></script>
       <link rel="stylesheet" href="htmllayout.css">
    </head>
-   <body>
-  <nav>
+   <body><nav>
+  <button class= "menubutton" onclick = "sideBar()"></button>
    <a href= "index.html">Home</a>
    <p></p>
    <a class = "current" href = "OOP/OOPmenu.html">OOP</a>
-   <p></p>
-   <a href="GUI/GUImenu.html">GUI</a>
    <p></p>
    <a href="Recursion/recursion.html">Recursion</a>
    <p></p>
@@ -23,7 +21,7 @@
    <a href="about.html">About</a>
  </nav>
   <header>
-  <h2>Fairy Tale OOP</h2>
+  <h2>Lesson 2</h2>
 </header>
  <section>
   <aside>
@@ -45,7 +43,10 @@
     </table>
   </aside>
   <article>
-
+    <h1>Common Interactions With Classes</h1>
+    <p>Most of the time, Classes should keep their variables private. As we talked about in Exercise 1, this improves the security of your variables. However, we still want to be able to edit these variables, or else there will be no way to interact with the information in the class. So how do we achieve this?</p>
+    <h1>Accessors And Mutators</h1>
+    <p>Everyone, including you, makes use of Accessors and Mutators. The screen that is projecting this text to you is an accessor method. It tells other things what it contains. But the computer would be pretty useless if all it could do was display something. We also want to be able to interact with it. We want to edit something, and the outcome be very predictable. A laptop comes with a keyboard, and a track pad, and you can add other peripherals like a mouse to interact with the laptop. These items are mutators. They mutate the data within the object, and thus causes the accessor method do display something different.</p>
   </article>
 </section>
 </body>

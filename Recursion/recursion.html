@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>About Me</title>
-    <base href = "https://fengxiong322.github.io/">
+    <title>Recursion</title>
+    <base href = "fengxiong322.github.io\"><script type="text/javascript" src="interactions.js"></script>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="htmllayout.css">
+    <style type="text/css">
+      #discordRecursion{
+        float:right;
+        max-width:20%;
+        max-height:20%;
+      }
+
+    </style>
   </head>
 
-  <body>
-    <nav>
+  <body><nav>
+    <button class= "menubutton" onclick = "sideBar()"></button>
         <a href= "index.html">Home</a>
         <p></p>
         <a href = "OOP/OOPmenu.html">OOP</a>
-        <p></p>
-        <a href="GUI/GUImenu.html">GUI</a>
         <p></p>
         <a class = "current" href="Recursion/recursion.html">Recursion</a>
         <p></p>
@@ -41,8 +47,10 @@
   </aside>
 
   <article>
+    <img id = "discordRecursion"src="Recursion/normalDiscordRecursion.png" alt="Recursive Discord Example">
     <h1>What is Recursion?</h1>
-    <p>Recursion is when a method calls itself, to break a problem down into smaller subproblems, until it reachs a trivial base problem. So what does this actually mean when programming? Below is the general set up of a recursive method:</p>
+    <p>
+      Recursion is when a method calls itself, to break a problem down into smaller subproblems, until it reachs a trivial base problem. So what does this actually mean when programming? Below is the general set up of a recursive method:</p>
     <pre class = "codeSample">
 public int aRecursiveMethod(int input){
 	if(baseCaseHasBeenReached){
@@ -82,10 +90,6 @@ public int aRecursiveMethod(int input){
 
     <h1>Mutual Recursion</h1>
     <p>Mutual Recursion is when two or methods call each other recursively. To visualize this, imagine two mirrors facing each other. The light reflects between the two mirrors, many times, creating multiple images of each mirror. Each image is smaller than the next, until there is no more space for an image to fit. Simliarly, two mutually recursive methods will call each other, until a simple base case is reached.</p>
-    <figure>
-      <img src="" alt="Recursive Discord Example">
-      <figcaption>Mutual Recursion</figcaption>
-    </figure>
     <h1>Tail Recursion</h1>
     <p>So</p>
   </article>

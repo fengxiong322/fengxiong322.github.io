@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feng's Portfolio</title>
+  <base href = "fengxiong322.github.io\"><script type="text/javascript" src="interactions.js"></script>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="htmllayout.css">
+</head>
+
+<body><nav>
+  <button class= "menubutton" onclick = "sideBar()"></button>
+   <a href= "index.html">Home</a>
+   <p></p>
+   <a href = "OOP/OOPmenu.html">OOP</a>
+   <p></p>
+   <a href="Recursion/recursion.html">Recursion</a>
+   <p></p>
+   <a href="Arrays/arraysandarraylists.html">Arrays and Arraylists</a>
+   <p></p>
+   <a class = "current" href="SearchSort/searchsort.html">Search and Sort</a>
+   <p></p>
+   <a href="Projects/projects.html">Projects</a>
+   <p></p>
+   <a href="about.html">About</a>
+ </nav>
+
+ <header>
+  <h2>Searching and Sorting</h2>
+</header>
+
+<section>
+  <aside>
+    <u><b><p>TABLE OF CONTENTS</p></b></u>
+    <table style="width:100%">
+      <tr>
+        <td class = "current"><a href="SearchSort/searchsort.html">Searching And Sorting</a></td>
+      </tr>
+    </table>
+  </aside>
+
+  <article>
+    <h2>Searching and Sorting</h2>
+    <a href = "SearchSort/searchsort.html#search">Searching</a><br>
+    <a href = "SearchSort/searchsort.html">Empty</a><br>
+    <a href = "SearchSort/searchsort.html#sorting">Sorting</a><br>
+    <a href = "SearchSort/searchsort.html#selection">Selection Sort</a><br>
+    <a href = "SearchSort/searchsort.html#bucket">Bucket Sort</a><br>
+    <br>
+    <h1 id = "search">Searchs</h1>
+    <p>First, we will begin with searchs. These are algorithms used to search for a particular item in an array. For the purpose of this tutorial, we will be sticking to integer values. However, code here can easily be modified to deal with other values, such as Strings.</p>
+    <h2 id = ""></h2>
+    <p></p>
+    <h1 id  = "sorting">Sorts</h1>
+    <p>Now that you understand various different types of searchs, we can now learn some sorts. Many sorts make uses of searching algorithms to find and sort an element. There are two main types of sorts: Comparision sorts and non-comparision sorts. Comparision sorts sort by comparing the values of two elements to decide where they need to be placed. Non-comparision sorts however do not need to make direct comparisions between each value. Instead, they are categorized.</p>
+    <h2 id = "selection">Selection Sort</h2>
+    <p>The selection sort is one of the easiest sorting algorithms to implement, but also one of the slowest. It is not very practical, but it is important to understand how it works.</p>
+    <h2 id = "bucket">Bucket Sort</h2>
+    <p>The bucket sort is a non-comparision sort. This means that no two items are compared to each other. Instead, each item is categorized into a "bucket". Each bucket holds a certain range/type of value, specified by the programmer. Below is a diagram of how a bucket sort works</p>
+    <img href = "idk">
+    <p>As you can see, each integer was categorized into a bucket. This is really helpful, because it breaks our original problem into subgroups. After each element is sorted into a seperate bucket, we can manipulate it it many different ways. The first way we can sort each individual bucket is a selection/insertion sort. More on selection sort here: <a href = "SearchSort/searchsort.html#selection"></a>. You can also find information on insertion sort <a></a>. You may be wondering about the time complexity of this bucket sort. Because this algorithm uses a selection/insertion sort, wouldn't the time complexity be slower than O(n<sup>2</sup>)? Although the worst case scenario for a bucket sort is indeed O(n<sup>2</sup>), it's average time is optimized. If you use the bucket sort in the correct way, an O(n<sup>2</sup>) solution will be very rare. To see why lets take a look at what the bucket sort does.</p>
+    <!--TODO: Add a bucket sort picture-->
+    <p>In the diagram above, we realize that the selection sort</p>
+
+  </article>
+</section>
+
+<footer>
+  <p>Created by Feng</p>
+</footer>
+
+</body>
+
+</html>
