@@ -51,21 +51,25 @@
     <a href = "OOP/Advanced1/advanced.html#programmingDesign">Programming Design</a><br>
     <a href = "OOP/Advanced1/advanced.html#encapsulation">Encapsulation</a><br>
     <a href = "OOP/Advanced1/advanced.html#inheritance">Inheritance</a><br>
-    <a href = "OOP/Advanced1/advanced.html#relations">Class Relations</a>
-    <br>
     <br>
     <br>
     <br>
     <h1 id = "polymorphism">Polymorphism</h1>
-    <p>The first concept we will talk about is polymorphism</p>
+    <p>The first concept we will talk about is polymorphism. Polymorphism allows for an object to take on many different forms.</p>
+    <p>In java, polymorphism allows subclass objects to be assigned to a pointer of its superclass. So what does this mean? If you wanted to talk about a bear, what could you say? There are many ways to refer to the bear. We could call it a bear, but we could also classify it by its "superclass", and just say, that "animal". This is completely valid. Something polymorphism doesnt allow for is for an object of the super class to be put in a pointer of a subclass. This is the equivilent of calling any animal, "bear". The animal may not necessarily be a bear.</p>
+    <p>Now lets test your understanding of polymorphism! Answer the questions below</p>
+    <!-- TODO: remember to add a multiple choice -->
+
+    <p>Now that you understand what polymorphism is, when would you use it?</p>
+    <p>My first reason would be that it is easier to use. For instance, imagine you ran a zoo. You want to create a database of all of the different animals you have in your zoo. WIthout polymorphism, every type of animal needs its own array to hold it. This is very inefficient, and it is hard for you to keep track as your zoo continues to add new animals. However, by using polymorphism, and making every animal have an Animal pointer, this problem becomes rather trivial. To test if you understand this concept, try to code this below</p>
+    <!-- TODO: ADD interactive box -->
     <h1 id = "programmingDesign">Programming Design</h1>
     <p>The next part is programming design. Having a proper program structure is important, because it allows other people to read your code clearly. One standard way to graphically organize your code is uml. uml stands for Unified Modeling Language. There are many different types of uml diagrams. One of them is the class diagram. This diagram can help describe your classes, and what they do. Let me show you what I mean...</p>
     <h1 id = "encapsulation">Encapsulation</h1>
-    <p></p>
+    <p>Encapsulation is a style to follow to ensure security of your data in classes and objects. It would be bad if just anyone could change a variable at will. Imagine playing pong. If the paddle class was not properly encapsulated, a hacker could easily change the position of a the paddle to teleport to new locations. Obviously, this will just be a mild annoyance in a game of pong, and you would quickly find something else to do. However, this is a very important habit to develop, because sometimes, your program may need to handle sensitive information, like passwords, emails, birthdays etc.</p>
+    <p>To encapsulate your data, you need to do two things. First, global variables that you would like to ecapsulate must be private. This limits access to these variables to only the class. Now, you can create get and set methods. These methods can define limits, for example, if the paddle tries to move too many pixels, the program won't allow it.</p>
     <h1 id = "inheritance">Inheritance</h1>
-    <p></p>
-    <h1 id = "relations">Class Relations</h1>
-    <p></p>
+    <p>Inheritance is a very important OOP concept, and can help save alot of repetitive code. </p>
   </article>
 </section>
 
