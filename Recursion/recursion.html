@@ -84,14 +84,14 @@ public int aRecursiveMethod(int input){
      2   1   1  0     1  0
     1 0
     </pre>
-    <p>Each method branches off into two, until it reachs the base case, which is either 1 or 0. Once the base case has been reached, they begin to merge, to answer each slightly larger subproblem, until the final answer is given. Now, you may have noticed, that many similar calls are made. For instance, fibonnaciNumber(4) calls 3 and two. But there is also a call of 3 on the right side of the tree. This redudency is okay for lower numbers, but once we get to higher numbers, we would like to be more efficient. To learn how to improve runtime speeds of your recursive method, read my <a href = ""> Dynamic Programming</a> article.</p>
+    <p>Each method branches off into two, until it reachs the base case, which is either 1 or 0. Once the base case has been reached, they begin to merge, to answer each slightly larger subproblem, until the final answer is given. Now, you may have noticed, that many similar calls are made. For instance, fibonnaciNumber(4) calls 3 and two. But there is also a call of 3 on the right side of the tree. This redudency is okay for lower numbers, but once we get to higher numbers, we would like to be more efficient. A solution to this problem is called dynamic programming, but that is out of the scope for this article</p>
 
     <p>Recursion doesn't always have to follow this structure. Depending on the type of problem you are given, you can use a multitude of recursion methods. Here, we will be talking about 2 other types of recursion "formats": mutual and tail recursion</p>
 
     <h1>Mutual Recursion</h1>
     <p>Mutual Recursion is when two or methods call each other recursively. To visualize this, imagine two mirrors facing each other. The light reflects between the two mirrors, many times, creating multiple images of each mirror. Each image is smaller than the next, until there is no more space for an image to fit. Simliarly, two mutually recursive methods will call each other, until a simple base case is reached.</p>
     <h1>Tail Recursion</h1>
-    <p>So</p>
+    <p>Another type of recursion is tail recursion. This means that the recurisive return line is the last line of the method. This makes it very similar a iterative loop. Typically, an iterative solution is prefered over tail recursion. This is because it takes up alot of stack space. Methods work with pass-by-value, meaning that new objects are created when they are put into the parameter. This uses alot of unnecessary memory.</p>
   </article>
 </section>
 
