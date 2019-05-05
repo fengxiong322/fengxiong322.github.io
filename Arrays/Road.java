@@ -22,4 +22,20 @@ public class Road{
     }
     road[0] = null;//Sets the first position to null, because at this point, road[0] is == to road[2]
   }
+
+  public static void main(String[] args){
+    Road test = new Road(10);//Creates a new Road
+    if(test.addCar(new Car("blue"), 8)){//Trys to add a new car at position 8
+      System.out.println("The Car was successfully added");//Tells the user that the Car has been placed
+    }else{
+      System.out.println("The Car was not added");
+    }
+    test.driveCars();//Run the driveCars() method. In theory, this should move the cars forward by 1
+    if(test.road[8] == null){//If it is still at 8
+      System.out.println("Your Car is at 8. This doesn't seem right...");
+    }
+    if(test.road[9] != null){
+      System.out.println("Your0 Car has moved to the correct position.");
+    }
+  }
 }
