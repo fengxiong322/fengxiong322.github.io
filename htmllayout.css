@@ -102,10 +102,6 @@ nav {
   transition: opacity 0.25s;
 }
 
-nav li{
-  display: inline;
-}
-
 nav:hover{
   opacity:1 !important;
 }

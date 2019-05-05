@@ -105,7 +105,30 @@ public class Road{
   <li>Steak</li>
   <li>mushroom sirlon</li>
 </ul>
-<p>Here there are 5 items. But this may not always be the case. at some point, they may want to add some extra menu option that they forgot. Or another option for vegans.</p>
+<p>Here there are 5 items. But this may not always be the case. at some point, they may want to add some extra menu option that they forgot. Or another option for vegans. This makes it difficult to use a normal array to store data. Here, we would use an array list. Below is an implementation of a menu builder. It will show case the important methods you need to work with arraaylists</p>
+<pre class = codeSample>
+  public class MenuBuilder{
+    ArrayList<String> menu;//Declaration of a new arraylist object: Arraylist<"Object type"> "variable name"
+
+    public MenuBuilder(){
+        menu = new ArrayList<String>();//Constructor for an arraylist.
+    }
+
+    public void addItem(String newItem){
+      menu.add(newItem);//Adds the newItem to the end of the ArrayList
+    }
+
+    public void addItem(int position, String newItem){
+      if(position <= menu.size() && position >= 0){//If it is a valid index
+        menu.add(position, newItem);//Adds the new Item at that index
+      }
+    }
+
+    public String toString(){
+      return menu;//Prints returns the contents of the arraylist
+    }
+  }
+</pre>
   </article>
 </section>
 
