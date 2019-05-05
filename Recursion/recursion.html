@@ -50,7 +50,7 @@
     <img id = "discordRecursion"src="Recursion/normalDiscordRecursion.png" alt="Recursive Discord Example">
     <h1>What is Recursion?</h1>
     <p>
-      Recursion is when a method calls itself, to break a problem down into smaller sub-problems, until it reachs a trivial base problem. So what does this actually mean when programming? Below is the general set up of a recursive method:</p>
+      Recursion is when a method calls itself, to break a problem down into smaller sub-problems, until it reaches a trivial base problem. So what does this actually mean when programming? Below is the general set up of a recursive method:</p>
     <pre class = "codeSample">
 public int aRecursiveMethod(int input){
 	if(baseCaseHasBeenReached){
@@ -76,7 +76,7 @@ public int aRecursiveMethod(int input){
   	System.out.println(fibonacci);
   }
     </pre>
-    <p>This Fibonnaci algorithm is very common in simple examples of recursion. To see what happens, we need to print out the calls. Here is a visual demonstration of what happens in the algorithm at the 5th Fibonacci number</p>
+    <p>This Fibonnaci algorithm is very common in simple examples of recursion. To see what happens, we need to print out the calls. Here is a visual demonstration of what happens in the algorithm at the 5th Fibonacci number.</p>
     <pre class = codeSample>
                    5
            4               3
@@ -84,7 +84,7 @@ public int aRecursiveMethod(int input){
      2   1   1  0     1  0
     1 0
     </pre>
-    <p>Each method branches off into two, until it reachs the base case, which is either 1 or 0. Once the base case has been reached, they begin to merge, to answer each slightly larger sub-problem, until the final answer is given. Now, you may have noticed, that many similar calls are made. For instance, fibonnaciNumber(4) calls fibonacciNumber(3) and fibonacciNumber(2). But there is also a call of fibonacciNumber(3) on the right side of the tree. This redundancy is okay for lower numbers, but once we get to higher numbers, we would like to be more efficient. A solution to this problem is called dynamic programming, but that is out of the scope for this article.</p>
+    <p>Each method branches off into two, until it reaches the base case, which is either 1 or 0. Once the base case has been reached, they begin to merge, to answer each slightly larger sub-problem, until the final answer is given. Now, you may have noticed, that many similar calls are made. For instance, fibonnaciNumber(4) calls fibonacciNumber(3) and fibonacciNumber(2). But there is also a call of fibonacciNumber(3) on the right side of the tree. This redundancy is okay for lower numbers, but once we get to higher numbers, we would like to be more efficient. A solution to this problem is called dynamic programming, but that is out of the scope for this article.</p>
 
     <p>Recursion doesn't always have to follow this structure. Depending on the type of problem you are given, you can use a multitude of recursion methods. Here, we will be talking about 2 other types of recursion "formats": mutual and tail recursion.</p>
 
