@@ -9,22 +9,22 @@
 
 <body><nav>
   <button class= "menubutton" onclick = "sideBar()"></button>
-   <a href= "index.html">Home</a>
-   <p></p>
-   <a href = "OOP/OOPmenu.html">OOP</a>
-   <p></p>
-   <a href="Recursion/recursion.html">Recursion</a>
-   <p></p>
-   <a class = "current" href="Arrays/arraysandarraylists.html">Arrays and Arraylists</a>
-   <p></p>
-   <a href="SearchSort/searchsort.html">Search and Sort</a>
-   <p></p>
-   <a href="Projects/projects.html">Projects</a>
-   <p></p>
-   <a href="about.html">About</a>
- </nav>
+  <a href= "index.html">Home</a>
+  <p></p>
+  <a href = "OOP/OOPmenu.html">OOP</a>
+  <p></p>
+  <a href="Recursion/recursion.html">Recursion</a>
+  <p></p>
+  <a class = "current" href="Arrays/arraysandarraylists.html">Arrays and Arraylists</a>
+  <p></p>
+  <a href="SearchSort/searchsort.html">Search and Sort</a>
+  <p></p>
+  <a href="Projects/projects.html">Projects</a>
+  <p></p>
+  <a href="about.html">About</a>
+</nav>
 
- <header>
+<header>
   <h2>Java GUI</h2>
 </header>
 
@@ -57,39 +57,39 @@ public class Car{
   }
 
   public boolean equals(Car anotherCar){//If two cars have the same color, they are considered to be the same car
-    if(this.getColor() == anotherCar.getColor())
-      return true;
+  if(this.getColor() == anotherCar.getColor())
+    return true;
   }
 }
 </pre>
-    <p>If you do not understand the code above, you may want to begin at <a href = "OOP/OOP-L1-Feng/OOPLesson1.html">OOP Lesson 1</a>. So now we have defined a Car. Next we want to create a road. A road holds cars.</p>
+<p>If you do not understand the code above, you may want to begin at <a href = "OOP/OOP-L1-Feng/OOPLesson1.html">OOP Lesson 1</a>. So now we have defined a Car. Next we want to create a road. A road holds cars.</p>
 <pre class = codeSample contenteditable="true">
-public class Road{
+  public class Road{
   <b>Car[] road; //Our road is defined as an array of cars. General syntax: "Object/primitive data type" [] "variable name"</b>
 
   public Road(int size){
-    <b>road = new Car[size]; //This tells the JVM(Java Virtual Machine) to set aside a certain amout of space, enough to fit each car. For now they are empty</b>
-  }
+  <b>road = new Car[size]; //This tells the JVM(Java Virtual Machine) to set aside a certain amout of space, enough to fit each car. For now they are empty</b>
+}
 
-  //This allows us to set a Car at a certain index in the array.
-  public boolean addCar(Car newCar, int position){
-    //Lets read this method in plain english
-    if(road[position] == null){ //If the specified position of our road is empty
-      road[position] = newCar;//Then set that specified position on the road as our new car
-      return true;// Tells use that the car was successfully placed
-    }
-    return false;//If the position on the road was filled, it will tell us that the new car could not be placed
-  }
+//This allows us to set a Car at a certain index in the array.
+public boolean addCar(Car newCar, int position){
+//Lets read this method in plain english
+if(road[position] == null){ //If the specified position of our road is empty
+road[position] = newCar;//Then set that specified position on the road as our new car
+return true;// Tells use that the car was successfully placed
+}
+return false;//If the position on the road was filled, it will tell us that the new car could not be placed
+}
 
-  //Drives all cars forward.
-  public void driveCars(){
-    <b>//For you to implement. We want to move all cars forward by one position. The first position will become null, and cars at the end of the array drive off the road</b>
-    <b>//Here are some important things to know about Arrays</b>
-    <b>//Each section of the array is defined by an index, a number associated with it to help the program identify its location</b>
-    <b>//Arrays are 0-indexed. This means that we start counting from 0, and not 1</b>
-    <b>//You can find the size of the array with "road.length". You can find the last index by subtracting one from that</b>
-    <b>//You will need to understand how for loops work for this activity.</b>
-  }
+//Drives all cars forward.
+public void driveCars(){
+<b>//For you to implement. We want to move all cars forward by one position. The first position will become null, and cars at the end of the array drive off the road</b>
+<b>//Here are some important things to know about Arrays</b>
+<b>//Each section of the array is defined by an index, a number associated with it to help the program identify its location</b>
+<b>//Arrays are 0-indexed. This means that we start counting from 0, and not 1</b>
+<b>//You can find the size of the array with "road.length". You can find the last index by subtracting one from that</b>
+<b>//You will need to understand how for loops work for this activity.</b>
+}
 }
 </pre>
 <button onclick="displayAnswer('road')">Compare</button>
@@ -108,28 +108,28 @@ public class Road{
 <p>Here there are 5 items. But this may not always be the case. at some point, they may want to add some extra menu option that they forgot. Or another option for vegans. This makes it difficult to use a normal array to store data. Here, we would use an array list. Below is an implementation of a menu builder. It will show case the important methods you need to work with arraaylists</p>
 <pre class = codeSample>
   public class MenuBuilder{
-    ArrayList<String> menu;//Declaration of a new arraylist object: Arraylist<"Object type"> "variable name"
+  ArrayList<String> menu;//Declaration of a new arraylist object: Arraylist<"Object type"> "variable name"
 
     public MenuBuilder(){
-        menu = new ArrayList<String>();//Constructor for an arraylist.
+    menu = new ArrayList<String>();//Constructor for an arraylist.
     }
 
     public void addItem(String newItem){
-      menu.add(newItem);//Adds the newItem to the end of the ArrayList
-    }
-
-    public void addItem(int position, String newItem){
-      if(position <= menu.size() && position >= 0){//If it is a valid index
-        menu.add(position, newItem);//Adds the new Item at that index
-      }
-    }
-
-    public String toString(){
-      return menu;//Prints returns the contents of the arraylist
-    }
+    menu.add(newItem);//Adds the newItem to the end of the ArrayList
   }
+
+  public void addItem(int position, String newItem){
+  if(position <= menu.size() && position >= 0){//If it is a valid index
+  menu.add(position, newItem);//Adds the new Item at that index
+}
+}
+
+public String toString(){
+return menu;//Prints returns the contents of the arraylist
+}
+}
 </pre>
-  </article>
+</article>
 </section>
 
 <footer>
