@@ -53,7 +53,38 @@
     <h1 id  = "sorting">Sorts</h1>
     <p>Now that you understand various different types of searchs, we can now learn some sorts. Many sorts make uses of searching algorithms to find and sort an element. There are two main types of sorts: Comparision sorts and non-comparision sorts. Comparision sorts sort by comparing the values of two elements to decide where they need to be placed. Non-comparision sorts however do not need to make direct comparisions between each value. Instead, they are categorized.</p>
     <h2 id = "selection">Selection Sort</h2>
-    <p>The selection sort is one of the easiest sorting algorithms to implement, but also one of the slowest. It is not very practical, but it is important to understand how it works.</p>
+    <p>The selection sort is one of the easiest sorting algorithms to implement, but also one of the slowest. It is not very practical, but it is important to understand how it works. A selection sort works by finding the next element to sort</p>
+<pre>
+Starting Array:
+1, 5, 2, 4, 3
+We want to sort in ascending order
+We want start by finding the lowest number in the entire array.
+First, we assume the minimum, is the first element. In this case it is 1.
+We then compare the minimum with the other numbers
+is 5 less then 1? No
+is 2 less then 1? No
+is 4 less then 1? No
+is 3 less then 1? No
+So our first number would be 1.
+<b>1</b>, 5, 2, 4, 3
+We repeat the same process with the unsorted section.
+We start by assuming 5 is the smallest number.
+is 2 less then 5? Yes, now, the new smallest number is 2.
+is 4 less then 2? No
+is 3 less then 2? No
+Our next number is 2. We put it in the second slot, and shift everything else down
+<b>1, 2</b>, 5, 4, 3
+We repeat this process again.
+We assume that 5 is the smallest number.
+Is 4 less then 5? Yes, the new smallest number is 4
+Is 3 less then 4? Yes, the smallest number is 3
+Here, we put 3 in the third slot, and shift everything else down
+<b>1, 2, 3</b>, 5, 4
+We repeat this process one more time
+We assume 5 is the smallest number.
+Is 4 less then 5? Yes, the smallest number is 4
+We move 4 to the second last s
+</pre>
     <h2 id = "bucket">Bucket Sort</h2>
     <p>The bucket sort is a non-comparision sort. This means that no two items are compared to each other. Instead, each item is categorized into a "bucket". Each bucket holds a certain range/type of value, specified by the programmer. Below is a diagram of how a bucket sort works</p>
     <img href = "idk">
