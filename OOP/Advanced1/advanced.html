@@ -50,6 +50,7 @@
     <a href = "OOP/Advanced1/advanced.html#polymorphism">Polymorphism</a><br>
     <a href = "OOP/Advanced1/advanced.html#programmingDesign">Programming Design</a><br>
     <a href = "OOP/Advanced1/advanced.html#encapsulation">Encapsulation</a><br>
+    <a href = "OOP/Advanced1/advanced.html#abstraction">Abstraction</a><br>
     <a href = "OOP/Advanced1/advanced.html#inheritance">Inheritance</a><br>
     <br>
     <br>
@@ -68,7 +69,54 @@
     <p>Encapsulation is a style to follow to ensure security of your data in classes and objects. It would be bad if just anyone could change a variable at will. Imagine playing pong. If the paddle class was not properly encapsulated, a hacker could easily change the position of a the paddle to teleport to new locations. Obviously, this will just be a mild annoyance in a game of pong, and you would quickly find something else to do. However, this is a very important habit to develop, because sometimes, your program may need to handle sensitive information, like passwords, emails, birthdays etc.</p>
     <p>To encapsulate your data, you need to do two things. First, global variables that you would like to ecapsulate must be private. This limits access to these variables to only the class. Now, you can create get and set methods. These methods can define limits, for example, if the paddle tries to move too many pixels, the program won't allow it.</p>
     <h1 id = "inheritance">Inheritance</h1>
-    <p>Inheritance is a very important OOP concept, and can help save alot of repetitive code. </p>
+    <p>Inheritance is a very important OOP concept, and can help save alot of repetitive code. Imagine you wanted to represent all Birds. All birds have some traits that are similar. For example, each bird has a beak, wings, feet, etc. However, each bird may have a different colour beak, wing, and feet. Each bird also does different things, some run, some hop, some fly, others do a combination. To do this, you can create classes that "inherit" properties from the bird. Below is an example of the Bird class.</p>
+    <pre class = "codeSample" contenteditable="true">
+public abstract class Bird{
+  private String beakColor;
+  private String bodyColor;
+  private String name;
+
+  public Bird(String beak, String body, String name){
+    beakColor = beak;
+    bodyColor = body;
+    this.name = name;
+  }
+
+  public String getBeak(){
+    return beakColor;
+  }
+
+  public String getBody(){
+    return bodyColor;
+  }
+
+  public String getName(){
+    return name;
+  }
+
+  abstract void call();
+
+  abstract void action();
+
+}
+    </pre>
+    <p>Those are some things that all bird will have. Notice how we left the birds call and its actions to be abstract. There is no default bird call, or action, because they could be different. Also notice that there is no default constructor. Again, there is no "default bird", so we cannot generate its colors and name before hand. Now. lets try and create a Great Horned Owl!</p>
+    <pre class = "codeSample">
+public class GreatHornedOwl extends Bird{//To inherit another class, we need to "extend" it.
+  public GreatHornedOwl(){
+    super("black", "brown", "Great Horned Owl");
+  }
+
+  public void call(){
+    System.out.println("hoot!");
+  }
+
+  public void action(){
+    System.out.println("The " + getName() + " has taken off!");
+  }
+}
+    </pre>
+    <p>Now you have seen how inheritance works. It is now your turn to try to create a new bird. Be creative! Make sure the run your program and experiment.</p>
   </article>
 </section>
 
