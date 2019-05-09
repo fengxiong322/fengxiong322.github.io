@@ -41,15 +41,46 @@
   <article>
     <h2>Searching and Sorting</h2>
     <a href = "SearchSort/searchsort.html#search">Searching</a><br>
-    <a href = "SearchSort/searchsort.html">Empty</a><br>
+    <a href = "SearchSort/searchsort.html#linear">Linear Search</a><br>
+    <a href = "SearchSort/searchsort.html#binary">Binary Search</a><br>
     <a href = "SearchSort/searchsort.html#sorting">Sorting</a><br>
     <a href = "SearchSort/searchsort.html#selection">Selection Sort</a><br>
     <a href = "SearchSort/searchsort.html#bucket">Bucket Sort</a><br>
     <br>
     <h1 id = "search">Searchs</h1>
     <p>First, we will begin with searchs. These are algorithms used to search for a particular item in an array. For the purpose of this tutorial, we will be sticking to integer values. However, code here can easily be modified to deal with other values, such as Strings.</p>
-    <h2 id = ""></h2>
-    <p></p>
+    <h2 id = "linear">Linear Search</h2>
+    <p>As the name implies, this search method searches each position in a linear fashion, progressing from the first index, up until the search finds the object or the array ends. Below is a quick implementation of a linear search, for integers, which can easily be adapted to search for other types of objects</p>
+    <pre class = codeSample>
+      public int linearSearch(int[] arr, int item){//Returns the index, and will return -1 if it does not appear in the array
+        for(int i = 0; i < arr.length; i++){
+          if(arr[i] == item)
+            return i;
+        }
+        return -1;
+      }
+</pre>
+    <h2 id = "binary">Binary Search</h2>
+    <p>Binary search is a specialized search for sorted arrays. This search is based on the assumption that the array is already sorted. Try to read through the implementation, before you read about the logic behind it</p>
+    <pre class = codeSample>
+  public static int binarySearch (int[] arr, int item)
+  {
+    int min = 0;
+    int max = arr.length - 1;
+    while (min!=max-1)
+    {
+      int middle = (max+min)/2;
+      if(arr[middle] == item)
+        return middle;
+      if(arr[middle]>item)
+        max = middle;
+      else
+        min = middle;
+    }
+    return -1;
+  }
+</pre>
+    <p>The search begins at the middle of the array. It then checks the value of the middle index, and compares it with the item we are looking for. If they are the same, we can return the index. If the item is bigger, then we know that it must be in the upper half of the array, and if the item is smaller, we know it is in the lower half of the array. This halfs the distance we need to compare. This process repeats, until either the middle is matched with the item, or the max and min become too close, at which we decide that the item cannot possibly be in the array, and we return -1.</p>
     <h1 id  = "sorting">Sorts</h1>
     <p>Now that you understand various different types of searchs, we can now learn some sorts. Many sorts make uses of searching algorithms to find and sort an element. There are two main types of sorts: Comparision sorts and non-comparision sorts. Comparision sorts sort by comparing the values of two elements to decide where they need to be placed. Non-comparision sorts however do not need to make direct comparisions between each value. Instead, they are categorized.</p>
     <h2 id = "selection">Selection Sort</h2>
