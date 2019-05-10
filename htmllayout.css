@@ -84,8 +84,8 @@ pre.interactive{
   font-family:monospace,monospace;
   font-size:1em;
   white-space: pre-wrap;
+  color: black;
   background-color: #FFF;
-  color: #000;
   border:2px solid Black;
 }
 
