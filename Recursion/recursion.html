@@ -64,7 +64,7 @@ public int aRecursiveMethod(int input){
     <p>To see how we can use this example, imagine we wanted to print out the n-th Fibonnaci number. </p>
     <pre class = "codeSample">
   public int fibonnaciNumber(int index){
-  	if(index&gt;= 2)//This checks if the base case has been achieved. We know that the second value in the series is 1, and the first value is 1
+  	if(index&lt;= 2)//This checks if the base case has been achieved. We know that the second value in the series is 1, and the first value is 1
   		return 1;
   	else{//If the base case has not been achieved run the program.
   		return fibonnaciNumber(index-1) + fibonnaci(index-2);//To calculate the current number, we need the previous number and the one before that.
