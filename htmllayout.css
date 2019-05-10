@@ -86,8 +86,7 @@ pre.interactive{
   white-space: pre-wrap;
   background-color: #FFF;
   color: #FFF;
-  border-style: solid;
-  border-color: #000;
+  border:2px solid Black;
 }
 
 iframe.answers{
