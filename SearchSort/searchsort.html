@@ -124,7 +124,7 @@ We move 4 to the second last s
     <p>In the diagram above, we realize that the selection sort can be optimized. This is because the algorithm does not have to travel through the entire array. Most of the work has already been done by the bucketsort.</p>
     <p>However, unlike comparison sorts, require some understanding of the range of your data. If you have no idea what kind of numbers may appear, a bucket sort may not be suitable. Before choosing to use bucket sort, you need to do a few checks. First of all, you need to confirm a range of the data set. For instance, a percentage. Percents are normalized and are typically between 0% and 100%. Another thing to look out for is distribution. If we had a dataset of percentages, but all of them are within 95%-100%, it wouldnt make sense to create buckets for 0%-9%, 10%-19%, 20%-29% and so on.</p>
     <p>A random number generator will be generating random integers from 1 to 100. Your job is to implement a bucket sort. Each bucket should have a range of 10. Some code has already been set up for you.</p>
-    <pre class = "codeSample" contenteditable="true">
+    <pre class = "interactive" contenteditable="true">
 import java.util.*;
 
 public class BucketSort{

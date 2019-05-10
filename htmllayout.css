@@ -80,6 +80,16 @@ pre.codeSample {
   border-radius: 4px;
 }
 
+pre.interactive{
+  font-family:monospace,monospace;
+  font-size:1em;
+  white-space: pre-wrap;
+  background-color: #FFF;
+  color: #FFF;
+  border-style: solid;
+  border-color: #000;
+}
+
 iframe.answers{
   display: none;
   border: none;
